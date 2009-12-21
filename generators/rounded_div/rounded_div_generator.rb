@@ -7,7 +7,7 @@ class RoundedDivGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
       @name = file_name
-      @background_color = args[1] || 'white'
+      @background_color = args[0] || 'white'
       @radius = Integer(args[1] || 5)
       @body_color = args[2] || 'blue'
       @image_directory = "public/images/#{@name}"
