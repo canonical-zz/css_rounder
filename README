@@ -24,7 +24,6 @@ TO-DO
 =====
 
 1. Add support for borders
-2. Change to .gif files (IE has a problem with transparent PNGs)
-3. Add tests
+2. Add tests
 
 Copyright (c) 2009 Canonical (Joe McGlynn), released under the MIT license

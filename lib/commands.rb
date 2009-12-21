@@ -17,18 +17,19 @@ module Canonical #:nodoc:
 
           gc.circle(radius-1, radius-1, radius-1, 0)
           gc.draw(canvas)
+          canvas.transparent_color = 'white'
 
-          puts "      create " + File.join(destination, 'top-left.png')
-          canvas.crop(0, 0, radius, radius).write(File.join(destination, 'top-left.png'))
+          puts "      create " + File.join(destination, 'top-left.gif')
+          canvas.crop(0, 0, radius, radius).write(File.join(destination, 'top-left.gif'))
 
-          puts "      create " + File.join(destination, 'top-right.png')
-          canvas.crop(radius-1, 0, radius, radius).write(File.join(destination, 'top-right.png'))
+          puts "      create " + File.join(destination, 'top-right.gif')
+          canvas.crop(radius-1, 0, radius, radius).write(File.join(destination, 'top-right.gif'))
 
-          puts "      create " + File.join(destination, 'bot-left.png')
-          canvas.crop(0, radius-1, radius, radius).write(File.join(destination, 'bot-left.png'))
+          puts "      create " + File.join(destination, 'bot-left.gif')
+          canvas.crop(0, radius-1, radius, radius).write(File.join(destination, 'bot-left.gif'))
 
-          puts "      create " + File.join(destination, 'bot-right.png')
-          canvas.crop(radius-1, radius-1, radius, radius).write(File.join(destination, 'bot-right.png'))
+          puts "      create " + File.join(destination, 'bot-right.gif')
+          canvas.crop(radius-1, radius-1, radius, radius).write(File.join(destination, 'bot-right.gif'))
         end
       end
 

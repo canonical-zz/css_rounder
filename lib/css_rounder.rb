@@ -12,7 +12,7 @@ module CSSRounder
     if sources.first == :pullquote
       collect_asset_files(ActionView::Helpers::AssetTagHelper::STYLESHEETS_DIR, '**', 'pullquote.css')
     else
-      original_expand_stylesheet_sources_without_pullquote(sources, recursive)
+      expand_stylesheet_sources_without_pullquote(sources, recursive)
     end
   end
 end
