@@ -1,0 +1,24 @@
+CSS Rounder
+============
+
+There are about a 'gazillion' articles on the web about making those cute rounded corner boxes with a variety of techniques.  The consensus seems to favor semantic markup with a minimum of CSS selectors.
+
+One technique I found called "pullquote" () seemed straightforward enough, although like many techniques it requires four images, one for each corner of the shaded area.  Rather than fire up Photoshop every time I wanted a different color or radius I decided to fire up my text editor and make a simple tool for doing this.  Enter will_round.
+
+Usage is super easy, after installing the plugin just run the generator:
+
+     script/plunin generate rounded_div CSS_NAME CORNER_RADIUS SVG_COLOR
+
+EXAMPLE
+=======
+
+For example, run the generator:
+
+    script/generate rounded_div some_selector_name 12 peachpuff
+
+This will generate the CSS and image files necessary
+
+Note that rmagick is required.  The color should be specified as a W3C SVG Color Name (see http://www.w3.org/TR/SVG/types.html#ColorKeywords)
+
+
+Copyright (c) 2009 Canonical (Joe McGlynn), released under the MIT license

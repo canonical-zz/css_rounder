@@ -1,0 +1,31 @@
+div#<%=name%>
+{
+ margin: 2em;
+ background: <%=body_color%> url(/images/<%=name%>/top-left.png) no-repeat;
+}
+
+div#<%=name%> h2
+{
+ margin: 0;
+ padding: <%=radius%>px <%=radius%>px 0 <%=radius%>px;
+ background: url(/images/<%=name%>/top-right.png) no-repeat 100% 0;
+}
+
+div#<%=name%> p
+{
+padding: 0 <%=radius%>px;
+}
+
+div#<%=name%> p.more
+{
+ padding: 0 0 0 <%=radius%>px;
+ background: url(/images/<%=name%>/bot-left.png) no-repeat 0 100%;
+}
+
+div#<%=name%> p.more a
+{
+ display: block;
+ padding: 0 <%=radius%>px <%=radius%>px 0;
+ text-align: right;
+ background: url(/images/<%=name%>/bot-right.png) no-repeat 100% 100%;
+}
