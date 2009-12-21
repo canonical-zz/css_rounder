@@ -7,14 +7,14 @@ One technique I found called "pullquote" (http://www.maxdesign.com.au/presentati
 
 Usage is super easy, after installing the plugin just run the generator:
 
-     script/plunin generate rounded_div CSS_NAME CORNER_RADIUS SVG_COLOR
+     script/plunin generate rounded_div CSS_NAME BACKGROUND_SVG_COLOR CORNER_RADIUS SVG_COLOR
 
 EXAMPLE
 =======
 
 For example, run the generator:
 
-    script/generate rounded_div some_selector_name 12 peachpuff
+    script/generate rounded_div some_selector_name black 12 peachpuff
 
 This will generate the CSS and image files necessary
 

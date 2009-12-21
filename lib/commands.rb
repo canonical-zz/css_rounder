@@ -6,14 +6,14 @@ module Canonical #:nodoc:
   module Generator #:nodoc:
     module Commands #:nodoc:
       module Create
-        def generate_corner_graphics(radius, color, destination)
+        def generate_corner_graphics(background_color, radius, color, destination)
           radius = Integer(radius)-1
           size = radius * 2
 
-          canvas = Magick::Image.new(size, size)   {self.background_color = 'black'}
+          canvas = Magick::Image.new(size, size)   {self.background_color = background_color}
           canvas.units = Magick::PixelsPerInchResolution
-          canvas.x_resolution = 72
-          canvas.y_resolution = 72
+          canvas.x_resolution = 300
+          canvas.y_resolution = 300
           gc = Magick::Draw.new
 
           # Draw ellipse
@@ -38,19 +38,19 @@ module Canonical #:nodoc:
       end
 
       module Destroy
-        def generate_corner_graphics(radius, color, destination)
+        def generate_corner_graphics(background_color, radius, color, destination)
           # delete everything from destination
         end
       end
 
       module List
-        def generate_corner_graphics(radius, color, destination)
+        def generate_corner_graphics(background_color, radius, color, destination)
           # list everything in destination
         end
       end
 
       module Update
-        def generate_corner_graphics(radius, color, destination)
+        def generate_corner_graphics(background_color, radius, color, destination)
           # Huh?
         end
       end

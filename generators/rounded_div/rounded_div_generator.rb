@@ -7,9 +7,9 @@ class RoundedDivGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
       @name = file_name
-
-      @radius = Integer(args[0] || 5)
-      @body_color = args[1] || 'blue'
+      @background_color = args[1] || 'white'
+      @radius = Integer(args[1] || 5)
+      @body_color = args[2] || 'blue'
       @image_directory = "public/images/#{@name}"
 
       puts "**************************************************************************************************"
@@ -40,7 +40,7 @@ class RoundedDivGenerator < Rails::Generator::NamedBase
       m.directory @image_directory
       m.template 'css_template.erb', "public/stylesheets/#{@name}/pullquote.css"
 
-      m.generate_corner_graphics @radius, @body_color, @image_directory
+      m.generate_corner_graphics @background_color, @radius, @body_color, @image_directory
 
     end
     
@@ -49,9 +49,14 @@ class RoundedDivGenerator < Rails::Generator::NamedBase
   end
 
   def banner
-    "Usage: #{$0} #{spec.name} css_id_name corner_radius svg_color"
+    "Usage: #{$0} #{spec.name} css_id_name background_svg_color corner_radius svg_color"
     ""
     "  note: use SVG Color Names (http://www.w3.org/TR/SVG/types.html#ColorKeywords)"
+    "  Params:"
+    "          css_id_name          is the name of the CSS ID selector that will be generated"
+    "          background_svg_color is the name of the background color OUTSIDE of the rounded box"
+    "          corner_radius        is the, um, radius of the corners"
+    "          svg_color            is the color of the rounded box"
   end
 
 
